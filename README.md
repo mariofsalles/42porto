@@ -52,3 +52,9 @@ ls -l && \
 tar -cf exo2.tar * 
 ```
 
+4. **ex03:** 
+```
+ssh-keygen
+path: /root/.ssh/id_marfern2
+cat /root/.ssh/id_marfern2.pub
+```
