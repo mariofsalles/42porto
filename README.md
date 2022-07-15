@@ -98,3 +98,26 @@ echo 'qualquer coisa em a' > a && \
 echo 'qualquer coisa em b' > b && \
 diff a b > sw.diff
 ```
+
+8. **ex08:** 
+```
+cd $HOME/42exercicios && \
+rm -rf $HOME/42exercicios/ex08 ; \
+mkdir ex08 && cd ex08 && \
+echo 'qualquer coisa' > '~teste1' && \
+mkdir teste2 && \
+echo 'qualquer coisa' > './teste2/teste2' && \
+mkdir teste3 && \
+echo 'qualquer coisa' > './teste3/teste3#' && \
+mkdir teste4 && \
+echo 'qualquer coisa' > './teste4/teste4' && \
+mkdir teste5 && \
+echo 'qualquer coisa' > './teste5/teste5#' && \
+mkdir teste6 && \
+echo 'qualquer coisa' > './teste6/~teste6' && \
+mkdir -p teste7/teste71 && \
+echo 'qualquer coisa' > './teste7/teste71/~teste71' && \
+echo 'qualquer coisa' > '~teste8#'
+
+echo "find ./ -regextype posix-egrep -iregex '.*\w#$|^.*\~\w*' -exec ls -la {} \; -exec rm {} \;" > clean
+```
