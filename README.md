@@ -58,3 +58,10 @@ ssh-keygen
 path: /root/.ssh/id_marfern2
 cat /root/.ssh/id_marfern2.pub
 ```
+
+5. **ex04:** 
+```
+echo "ls -pUm" > midLS
+cd $HOME/42exercicios
+bash /ex04/midLS
+```
