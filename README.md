@@ -65,3 +65,10 @@ echo "ls -pUm" > midLS
 cd $HOME/42exercicios
 bash /ex04/midLS
 ```
+
+5. **ex05:** 
+```
+git log | grep commit | head -n4 | cut -d" " -f2  
+chmod +x git_commit.sh
+bash git_commit.sh | cat -e
+```
