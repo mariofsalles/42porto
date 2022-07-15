@@ -1,11 +1,11 @@
 # 42porto
-1. **ex00:** 
+0. **ex00:** 
 ```
 mkdir ex00 && cd ex00
 echo "Z" > z
 cat z
 ```
-2. **ex01:** 
+1. **ex01:** 
 ```
 mkdir ex01 && cd ex01
 touch testShell00
@@ -13,7 +13,7 @@ chmod 455 testShell00
 tar -cf testShell00.tar testShell00
 ```
 
-3. **ex02:** 
+2. **ex02:** 
 ```
 cd $HOME/42exercicios && \
 rm -rf $HOME/42exercicios/ex02 ; \
@@ -52,23 +52,49 @@ ls -l && \
 tar -cf exo2.tar * 
 ```
 
-4. **ex03:** 
+3. **ex03:** 
 ```
 ssh-keygen
 path: /root/.ssh/id_marfern2
 cat /root/.ssh/id_marfern2.pub
 ```
 
-5. **ex04:** 
+4. **ex04:** 
 ```
+cd $HOME/42exercicios && \
+rm -rf $HOME/42exercicios/ex04 ; \
+mkdir ex04 && cd ex04 && \
 echo "ls -pUm" > midLS
-cd $HOME/42exercicios
-bash /ex04/midLS
+cat midLS
 ```
 
 5. **ex05:** 
 ```
-git log | grep commit | head -n4 | cut -d" " -f2  
-chmod +x git_commit.sh
+cd $HOME/42exercicios && \
+rm -rf $HOME/42exercicios/ex05 ; \
+mkdir ex05 && cd ex05 && \
+echo '#!/bin/bash\ngit log | grep commit | head -n4 | cut -d" " -f2\n' > git_commit.sh && \
+chmod +x git_commit.sh && \
 bash git_commit.sh | cat -e
+```
+
+6. **ex06:** 
+```
+cd $HOME/42exercicios && \
+echo "test\n./test/*" > .gitignore
+rm -rf $HOME/42exercicios/ex06 ; \
+mkdir ex06 && cd ex06 && \
+echo '#!/bin/bash\n(cd $HOME/42exercicios && cat .gitignore)' > git_ignore.sh && \
+chmod +x git_ignore.sh && \
+bash git_ignore.sh | cat -e
+```
+
+7. **ex07:** 
+```
+cd $HOME/42exercicios && \
+rm -rf $HOME/42exercicios/ex07 ; \
+mkdir ex07 && cd ex07 && \
+echo 'qualquer coisa em a' > a && \
+echo 'qualquer coisa em b' > b && \
+diff a b > sw.diff
 ```
